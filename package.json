@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://vc23028-viki.github.io/SFEMS_Frontend",
+  "homepage": "https://github.com/vc23028-viki/SFEMS_Frontend.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
