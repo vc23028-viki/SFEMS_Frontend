@@ -1,0 +1,213 @@
+/* src/pages/equipment.css */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.equipment-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+  min-height: calc(100vh - 70px);
+}
+
+.equipment-container h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  animation: fadeInDown 0.6s ease;
+}
+
+.equipment-container .add-form,
+.equipment-container .equipment-list {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.equipment-container .add-form h2,
+.equipment-container .equipment-list h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.equipment-container .form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* EQUIPMENT PAGE INPUT STYLES - WHITE TEXT ON DARK BACKGROUND */
+.equipment-container .form-group input,
+.equipment-container .form-group select {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.equipment-container .form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.equipment-container .form-group input:focus,
+.equipment-container .form-group select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* FIX DROPDOWN OPTIONS - MAKE THEM VISIBLE */
+.equipment-container .form-group select option {
+  background-color: #040404;
+  color: #ffffff;
+  padding: 12px;
+}
+
+.equipment-container .form-group select option:checked {
+  background: linear-gradient(#667eea, #667eea);
+  background-color: #667eea;
+  color: white;
+}
+
+.equipment-container .equipment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.equipment-container .equipment-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.equipment-container .equipment-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.equipment-container .equipment-meta {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.equipment-container .card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-5px);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background: #6366f1;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 20px;
+  color: white;
+}
+
+.view-only-message {
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  color: #93c5fd;
+  text-align: center;
+}

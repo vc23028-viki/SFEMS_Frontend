@@ -1,0 +1,321 @@
+/* src/pages/user_management.css - User Management Page */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-management-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+  min-height: calc(100vh - 70px);
+}
+
+.user-management-container h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  animation: fadeInDown 0.6s ease;
+}
+
+.add-user-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.add-user-form h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.add-user-form .form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* USER MANAGEMENT INPUT STYLES - WHITE TEXT ON DARK BACKGROUND */
+.add-user-form input,
+.add-user-form select {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.add-user-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.add-user-form input:focus,
+.add-user-form select:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
+}
+
+/* FIX DROPDOWN OPTIONS - BLACK BACKGROUND WITH WHITE TEXT */
+.add-user-form select {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 35px;
+}
+
+.add-user-form select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 12px 8px;
+  line-height: 1.8;
+  border: none;
+}
+
+.add-user-form select option:checked {
+  background: linear-gradient(#667eea, #667eea);
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+.add-user-form select option:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.users-list {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.users-list h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.user-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.user-email {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.user-role {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+
+.user-date {
+  font-size: 12px;
+  opacity: 0.7;
+  color: #b0b0b0;
+}
+
+.role-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.role-badge.role-admin {
+  background: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.5);
+}
+
+.role-badge.role-operator {
+  background: rgba(251, 146, 60, 0.3);
+  color: #fdba74;
+  border: 1px solid rgba(251, 146, 60, 0.5);
+}
+
+.role-badge.role-user {
+  background: rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-5px);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:disabled {
+  background: #1e40af;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #6366f1;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary:disabled {
+  background: #312e81;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+.btn-danger:disabled {
+  background: #991b1b;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 20px;
+  color: white;
+}
+
+.access-denied {
+  max-width: 800px;
+  margin: 100px auto;
+  text-align: center;
+  color: white;
+  padding: 40px;
+}
+
+.access-denied h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: fadeInDown 0.6s ease;
+}
+
+.access-denied p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.view-only-message {
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  color: #93c5fd;
+  text-align: center;
+}

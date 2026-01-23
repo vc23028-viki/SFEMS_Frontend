@@ -1,0 +1,128 @@
+/* src/pages/maintenance_schedules.css */
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= MAINTENANCE SCHEDULES ================= */
+.schedules-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+  min-height: calc(100vh - 70px);
+}
+
+.schedules-container h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  animation: fadeInDown 0.6s ease;
+}
+
+.schedules-container .add-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.schedules-container .add-form h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.schedules-container .form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* INPUTS & SELECTS */
+.schedules-container .form-group input,
+.schedules-container .form-group select {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  color-scheme: dark;
+  position: relative;
+  z-index: 10;
+}
+
+.schedules-container input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.schedules-container input:focus,
+.schedules-container select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* DROPDOWN OPTIONS FIX */
+.schedules-container select option {
+  background-color: #1e1e2f;
+  color: #ffffff;
+}
+
+.schedules-container select option:hover,
+.schedules-container select option:checked {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* SCHEDULE LIST */
+.schedules-list {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.schedule-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.schedule-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
